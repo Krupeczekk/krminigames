@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body,
+html,
+.app {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    flex: 1;
+    box-sizing: border-box;
+    background-color: #000e11;
+}
+
+.app {
+    position: relative;
+    isolation: isolate;
+}
+
+nav {
+    display: flex;
+    background: #031f25;
+    padding: 1vh 2vh;
+    align-items: center;
+}
+
+nav a {
+    color: #dddddd;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--blue1-hover);
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo a {
+    display: flex;
+    gap: 2vh;
+    align-items: center;
+    font-size: 1.5rem;
+    width: fit-content;
+}
+
+.logo a:hover {
+    color: #23bfda;
+    text-shadow: 0 0 2vh #1c8b9e;
+}
+
+#login {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #103e58;
+    border-radius: .5rem;
+    padding: 1vh;
+    box-sizing: border-box;
+    opacity: 0.5;
+}
+
+.game a {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.games {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.games-title {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.games-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3vh;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    background-color: #16333bb9;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    border-radius: 1vh;
+    border: 1px solid #28849ed3;
+    transition: 1s;
+}
+
+.game-title {
+    font-size: 1.5rem;
+    color: #4c9fc0;
+}
+
+.game-desc {
+    font-size: 1rem;
+    color: #4ba6ca7a;
+    max-width: 80%;
+    text-align: center;
+}
+
+.game:hover {
+    transform: translateY(-5%);
+    box-shadow: 0 0 2vh #40bcdf;
+}
+
+.view {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 4vh;
+    padding: 2vh;
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+    margin-top: auto;
+    padding: 2vh;
+    box-sizing: border-box;
+    background-color: #23bbcf09;
+    flex-shrink: 0;
+}
+
+.footer-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 0 2vh #ffffff5d;
+}
+
+.footer-description {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #ffffff7c;
+    text-shadow: 0 0 2vh #ffffff5d;
+}
+
+/*dots*/
+
+.dot {
+    position: absolute;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    background-color: #ffffff49;
+    border: 1px solid #ffffffa4;
+}
+
+/* questions */
+
+.questions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.questions-container .question-title {
+    font-size: 2rem;
+    color: #ffff;
+}
+
+.questions-container .questions-answers {
+    display: flex;
+    gap: 1vh;
+}
+
+.questions-container .questions-answer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 7vh;
+    color: #3ba3d3;
+    background-color: #072136;
+    border-radius: .5rem;
+    box-shadow: 0 0 1vh #3ba3d37a inset;
+}
+
+.questions-container .questions-answer.incorrect {
+    border: 1px solid #f70808;
+}
+
+.questions-container .questions-answer.correct {
+    border: 1px solid #34da258e;
+}
+
+/*squares*/
+
+.square {
+    position: absolute;
+    width: 5vh;
+    height: 5vh;
+    background-color: #ec11cf81;
+    border: 1px solid #ec11cf;
+}
+
+/*numbers*/
+
+.numbers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.number-find-title {
+    font-size: 1.5rem;
+    color: #fff;
+    border: 1px solid #ffffff5d;
+    padding: 1vh;
+    box-sizing: border-box;
+    box-shadow: 0 0 0.5vh #ffffff7e inset;
+    border-radius: .2rem;
+}
+
+.numbers-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    gap: 1vh;
+}
+
+.numbers-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    background-color: #0d2d3f;
+    color: #40bcdf;
+    border-radius: 0.3vh;
+}
+
+.progress {
+    width: 100%;
+    height: 2vh;
+    background-color: #ffffff62;
+    border-radius: .5rem;
+}
+
+.bar {
+    width: 0%;
+    height: 2vh;
+    background-color: #1180cacc;
+    border-radius: .5rem;
+}
+
+/*main*/
+
+.game-instruction {
+    text-align: center;
+    color: #fff;
+}
+
+.game-field {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ffffff31;
+}
+
+.startgame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5vh;
+    background-color: #2dd473;
+    border-radius: 0.5vh;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff21;
+}
+@media screen and (max-width: 599px) {
+    .games-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .game-title {
+        font-size: 1.3rem;
+        color: #4c9fc0;
+    }
+
+    .game-desc {
+        max-width: 90%;
+    }
+
+    .footer-title {
+        font-size: 0.8rem;
+    }
+
+    .footer-description {
+        font-size: 0.7rem;
+    }
+
+    .square {
+        width: 4vh;
+        height: 4vh;
+    }
+
+    .questions-container .questions-answers {
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+        width: 100%;
+    }
+
+    .questions-container .question-title {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .questions-container .questions-answer {
+        font-size: 0.8rem;
+        text-wrap: nowrap;
+        width: 100%;
+    }
+
+    .numbers-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
